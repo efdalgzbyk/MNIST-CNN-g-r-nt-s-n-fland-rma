@@ -66,7 +66,8 @@ This project performs image classification on the **MNIST** handwritten digits d
 ## 💻 Run the Project
 
 ```bash
-python mnist_cnn_classifier.py```
+python mnist_cnn_classifier.py
+```
 
 # MNIST El Yazısı Rakam Tanıma – CNN ile Görüntü Sınıflandırma
 
