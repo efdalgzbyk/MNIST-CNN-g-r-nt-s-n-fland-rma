@@ -6,7 +6,7 @@
 
 ```markdown
 # MNIST Handwritten Digit Recognition – CNN Image Classification
-
+```
 This project performs image classification on the **MNIST** handwritten digits dataset using a **Convolutional Neural Network (CNN)**. The model is trained to recognize digits from 0 to 9. It's a great starter project for those learning the basics of deep learning.
 
 ---
