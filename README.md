@@ -66,5 +66,66 @@ This project performs image classification on the **MNIST** handwritten digits d
 ## 💻 Run the Project
 
 ```bash
-python mnist_cnn_classifier.py
+python mnist_cnn_classifier.py```
 
+# MNIST El Yazısı Rakam Tanıma – CNN ile Görüntü Sınıflandırma
+
+Bu projede, el yazısı ile yazılmış rakamları içeren **MNIST** veri seti kullanılarak bir **Convolutional Neural Network (CNN)** modeli ile görüntü sınıflandırma yapılmıştır. Model 0'dan 9'a kadar olan rakamları tanımayı öğrenir. Proje, derin öğrenmeye başlangıç yapmak isteyenler için güçlü ve sade bir örnektir.
+
+---
+
+## 📌 Kullanılan Veri Seti
+
+- **MNIST** veri seti, 28x28 boyutunda el yazısı rakam resimlerinden oluşur.
+- 60.000 eğitim ve 10.000 test verisi içerir.
+- `tensorflow.keras.datasets` üzerinden doğrudan yüklenir.
+
+---
+
+## 🔧 Kullanılan Teknolojiler ve Kütüphaneler
+
+- Python 3.x
+- TensorFlow / Keras
+- NumPy
+- Matplotlib
+
+---
+
+## 🚀 Proje Adımları
+
+1. **Veri Yükleme ve Ön İşleme:**  
+   - MNIST veri seti yüklendi.  
+   - Görüntüler normalize edildi ve CNN için uygun şekle getirildi (28x28x1).  
+   - Etiketler one-hot encoding formatına çevrildi.
+
+2. **Model Mimarisi:**  
+   - 2 konvolüsyonel katman + max pooling  
+   - Flatten → Dense (128 nöron) → Dense (10 nöron, softmax)  
+   - Aktivasyon fonksiyonları: `relu`, `softmax`  
+   - Kayıp fonksiyonu: `categorical_crossentropy`  
+   - Optimizasyon: `Adam`
+
+3. **Model Eğitimi:**  
+   - Epoch: 5  
+   - Batch size: 128  
+   - Eğitim ve doğrulama başarımı görselleştirildi.
+
+4. **Model Kaydı:**  
+   - Eğitilen model `.h5` dosyasına (`mnist_model.h5`) kaydedildi.
+
+---
+
+## 📁 Oluşturulan Dosyalar
+
+| Dosya Adı                  | Açıklama                                     |
+|---------------------------|----------------------------------------------|
+| `mnist_cnn_classifier.py` | Ana Python dosyası                           |
+| `mnist_model.h5`          | Eğitilmiş model                              |
+| `mnist_training_accuracy.png` | Eğitim ve doğrulama başarımı grafiği     |
+
+---
+
+## 💻 Çalıştırma
+
+```bash
+python mnist_cnn_classifier.py
